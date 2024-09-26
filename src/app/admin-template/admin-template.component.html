@@ -1,0 +1,98 @@
+<mat-toolbar color="primary">
+    <button mat-button>OHATRA</button>
+    <button class="menu" mat-button (click)="myDrawer.toggle()">
+        <mat-icon >sort</mat-icon>
+    </button>
+    <div class="search-container">
+        <input type="search" class="recherche" placeholder="Rechercher...">
+        <mat-icon class="search-icon">search</mat-icon> 
+    </div>
+</mat-toolbar>
+
+<mat-drawer-container>
+    <mat-drawer #myDrawer opened="true" mode="side" position="start">
+        <div class="image">
+            <img class="admin-image" src="assets/images/admin.jpg" alt="">
+        </div>
+        <div class="informations">
+            <p class="nom-admin">Tantelinirina Ravoson</p>
+            <p class="role">Administrateur</p>
+        </div>
+        <div class="titre">
+            <p class="admin">ADMIN</p>
+        </div>
+        <mat-list>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/dashboard">
+                    <mat-icon color="primary">dashboard</mat-icon>
+                    Tableau de board
+                </button>
+            </mat-list-item>
+        </mat-list>
+        <hr class="horizontale-1">
+        <div class="titre">
+            <p >FRONT OFFICE</p>
+        </div>
+        <mat-list>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/categorie">
+                    <mat-icon color="primary">category</mat-icon>
+                    Catégorie
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/service">
+                    <mat-icon color="primary">chat_bubble</mat-icon>
+                    Service
+                </button>
+            </mat-list-item>
+        </mat-list>
+        <hr class="horizontale-1">
+        <div class="titre">
+            <p >BACK OFFICE</p>
+        </div>
+        <mat-list>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/produit">
+                    <mat-icon color="primary">shopping_bag</mat-icon>
+                    Produit
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/client">
+                    <mat-icon color="primary">people</mat-icon>
+                    Client
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/commande">
+                    <mat-icon color="primary">receipt</mat-icon>
+                    Commande
+                </button>
+            </mat-list-item>
+        </mat-list>
+        <hr class="horizontale-1">
+        <div class="titre">
+            <p >EXTENSIONS</p>
+        </div>
+        <mat-list>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/profile">
+                    <mat-icon color="primary">account_circle</mat-icon>
+                    Profile
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/login">
+                    <mat-icon color="primary">logout</mat-icon>
+                    Déconnexion
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="min-height: 600px;" class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

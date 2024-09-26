@@ -1,0 +1,96 @@
+.titre p{
+    color: #867F7F;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 18px;
+    margin-bottom: -14px;
+}
+
+mat-list-item{
+    margin-bottom: -20px;
+}
+
+.dashboard{
+    font-size: 12px;
+}
+
+.admin-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+
+.image{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.informations {
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.informations .role{
+    color: blue;
+    font-size: 10px;
+}
+
+.informations .nom-admin{
+    margin-bottom: -4px;
+}
+
+.menu{
+    margin-left: 40px;
+    padding: 0;
+}
+
+.horizontale-1{
+    color: #f7f2f2;
+    margin-top: 15px;
+}
+
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centre l'icône et l'input verticalement */
+    margin-left: auto;
+  }
+  
+.search-icon {
+    position: absolute;
+    color: #999; 
+    margin-left: 150px;
+    font-size: 20px;
+    margin-top: 7px;
+  }  
+  
+  
+.recherche {
+    padding-left: 30px; /* Ajoutez du remplissage pour éviter que le texte ne chevauche l'icône */
+    border-radius: 20px;
+    font-size: 11px;
+    padding-top: 7px;
+  }
+  
+
+ .image-nav{
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.admin-image-nav{
+    width: 23px;
+    height: 23px;
+    border-radius: 50px;
+    object-fit: cover;
+    border: 1px solid white;
+}
+
+.container {
+    padding: 10px;
+}
