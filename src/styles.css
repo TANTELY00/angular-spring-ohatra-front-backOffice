@@ -4,5 +4,32 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
     font-family: 'Ubuntu', sans-serif;
-  }
+}
   
+
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centre l'icône et l'input verticalement */
+    margin-left: auto;
+  }  
+
+  .search-icon {
+    position: absolute;
+    color: #999; 
+    margin-left: 150px;
+    font-size: 20px;
+    margin-top: 7px;
+    cursor: pointer;
+  }  
+  
+  
+.recherche {
+    padding-left: 30px; /* Ajoutez du remplissage pour éviter que le texte ne chevauche l'icône */
+    font-size: 11px;
+    padding-top: 7px;
+  }
+
+  .table{
+    width: 800px;
+  }

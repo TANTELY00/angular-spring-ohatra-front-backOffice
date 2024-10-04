@@ -1,0 +1,35 @@
+.example-full-width{
+
+    height: 75px;
+    width: 300px;
+}
+
+.image{
+    height: 75px;
+    width: 300px;
+}
+button{
+    width: 300px;
+    margin-left: 8px;
+}
+
+.item1{
+    margin-right: 20px;
+}
+
+.header{
+    padding-bottom: 10px;
+}
+.recherche{
+    width: 250px;
+}
+.search-icon {
+    margin-left: 215px;
+    z-index: 2;
+  } 
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}  
+

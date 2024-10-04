@@ -1,12 +1,9 @@
 .example-full-width{
-    margin-top: 20px;
+
     height: 75px;
     width: 300px;
 }
-.description{
-    width: 300px;
-    height: 120px;
-}
+
 .image{
     height: 75px;
     width: 300px;
@@ -15,7 +12,29 @@ button{
     width: 300px;
     margin-left: 8px;
 }
-.disposition{
-    display: inline-flex;
-    
+
+.item1{
+    margin-right: 20px;
 }
+
+.header{
+    padding-bottom: 10px;
+}
+.recherche{
+    width: 250px;
+}
+.search-icon {
+    margin-left: 215px;
+    z-index: 2;
+  } 
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}  
+
+.description {
+    height: 300px;
+    width: 300px;
+}
+

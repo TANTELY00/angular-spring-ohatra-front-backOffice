@@ -1,0 +1,17 @@
+mat-form-field {
+    margin-top: 10px;
+    height: 75px;
+    width: 300px;
+}
+
+mat-card-actions button{
+    margin-left: 9px;
+    width: 300px;
+}
+
+.card{
+    display: flex;
+    /* justify-content: space-between; */
+    
+}
+

@@ -1,3 +1,5 @@
+import { MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,7 +15,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { CategorieComponent } from './categorie/categorie.component';
 import { ServiceComponent } from './service/service.component';
-import { ProduitComponent } from './produit/produit.component';
 import { ClientComponent } from './client/client.component';
 import { CommandeComponent } from './commande/commande.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -22,14 +23,21 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { HttpClientModule } from '@angular/common/http';
+// pour la date
+import { MatDatepickerModule, MatDateRangeInput, MatDateRangePicker, MatRangeDateSelectionModel } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
     AdminTemplateComponent,
     CategorieComponent,
     ServiceComponent,
-    ProduitComponent,
     ClientComponent,
     CommandeComponent,
     ProfileComponent,
@@ -47,7 +55,16 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatMenuModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDateRangePicker,
+    MatSelectModule,
   ],
   providers: [
     provideAnimationsAsync()

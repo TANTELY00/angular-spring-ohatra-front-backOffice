@@ -52,31 +52,6 @@ mat-list-item{
     margin-top: 15px;
 }
 
-
-.search-container {
-    position: relative;
-    display: flex;
-    align-items: center; /* Centre l'icône et l'input verticalement */
-    margin-left: auto;
-  }
-  
-.search-icon {
-    position: absolute;
-    color: #999; 
-    margin-left: 150px;
-    font-size: 20px;
-    margin-top: 7px;
-  }  
-  
-  
-.recherche {
-    padding-left: 30px; /* Ajoutez du remplissage pour éviter que le texte ne chevauche l'icône */
-    border-radius: 20px;
-    font-size: 11px;
-    padding-top: 7px;
-  }
-  
-
  .image-nav{
     text-align: center;
     margin-top: 20px;

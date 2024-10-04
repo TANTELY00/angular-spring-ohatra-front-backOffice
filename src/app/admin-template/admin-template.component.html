@@ -36,6 +36,18 @@
         <mat-list>
             <mat-list-item>
                 <button mat-button class="dashboard" routerLink="/categorie">
+                    <mat-icon color="primary">home</mat-icon>
+                    Accueil
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/categorie">
+                    <mat-icon color="primary">accessibility</mat-icon>
+                    A propos
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="dashboard" routerLink="/categorie">
                     <mat-icon color="primary">category</mat-icon>
                     Catégorie
                 </button>
@@ -53,10 +65,15 @@
         </div>
         <mat-list>
             <mat-list-item>
-                <button mat-button class="dashboard" routerLink="/produit">
+                <button mat-button class="dashboard"  [matMenuTriggerFor]="importMenu">
                     <mat-icon color="primary">shopping_bag</mat-icon>
                     Produit
+                    <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
                 </button>
+                <mat-menu #importMenu>
+                    <button mat-menu-item routerLink="/chaussure">Chaussure</button>
+                    <button mat-menu-item >Chemise</button>
+                </mat-menu>
             </mat-list-item>
             <mat-list-item>
                 <button mat-button class="dashboard" routerLink="/client">
