@@ -1,16 +1,20 @@
-<mat-toolbar color="primary">
-    <button mat-button>OHATRA</button>
+<mat-toolbar color="primary" class="navbar">
+    <button mat-button>NDAO HAN'OHATRA</button>
     <button class="menu" mat-button (click)="myDrawer.toggle()">
         <mat-icon >sort</mat-icon>
     </button>
     <div class="search-container">
-        <input type="search" class="recherche" placeholder="Rechercher...">
-        <mat-icon class="search-icon">search</mat-icon> 
+        <button mat-button class="mat">
+            <mat-icon class="account-icon">account_circle</mat-icon> 
+        </button>
+        <button mat-button class="mat">
+            <mat-icon class="logout-icon">logout</mat-icon> 
+        </button>
     </div>
 </mat-toolbar>
 
-<mat-drawer-container>
-    <mat-drawer #myDrawer opened="true" mode="side" position="start">
+<mat-drawer-container class="side-bar">
+    <mat-drawer #myDrawer opened="true" mode="side" position="start" class="side">
         <div class="image">
             <img class="admin-image" src="assets/images/admin.jpg" alt="">
         </div>
@@ -42,19 +46,19 @@
             </mat-list-item>
             <mat-list-item>
                 <button mat-button class="dashboard" routerLink="/categorie">
-                    <mat-icon color="primary">accessibility</mat-icon>
+                    <mat-icon color="primary">info</mat-icon>
                     A propos
                 </button>
             </mat-list-item>
             <mat-list-item>
                 <button mat-button class="dashboard" routerLink="/categorie">
-                    <mat-icon color="primary">category</mat-icon>
+                    <mat-icon color="primary">view_list</mat-icon>
                     Catégorie
                 </button>
             </mat-list-item>
             <mat-list-item>
                 <button mat-button class="dashboard" routerLink="/service">
-                    <mat-icon color="primary">chat_bubble</mat-icon>
+                    <mat-icon color="primary">support_agent</mat-icon>
                     Service
                 </button>
             </mat-list-item>
@@ -70,9 +74,17 @@
                     Produit
                     <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
                 </button>
-                <mat-menu #importMenu>
-                    <button mat-menu-item routerLink="/chaussure">Chaussure</button>
-                    <button mat-menu-item >Chemise</button>
+                <mat-menu #importMenu >
+                    <ng-container *ngFor="let p of cathegories; " class="check">
+                        <div class="menu-item">
+                            <div>
+                                <mat-icon color="primary" class="view_list">shopping_bag</mat-icon>
+                            </div>
+                            <div>
+                                <button class="dashboard1" mat-button routerLink="/{{p.nomCategorie}}" [value]="p.nomCategorie">{{p.nomCategorie}}</button>
+                            </div>
+                        </div>
+                    </ng-container>
                 </mat-menu>
             </mat-list-item>
             <mat-list-item>
@@ -87,22 +99,16 @@
                     Commande
                 </button>
             </mat-list-item>
-        </mat-list>
-        <hr class="horizontale-1">
-        <div class="titre">
-            <p >EXTENSIONS</p>
-        </div>
-        <mat-list>
             <mat-list-item>
-                <button mat-button class="dashboard" routerLink="/profile">
-                    <mat-icon color="primary">account_circle</mat-icon>
-                    Profile
+                <button mat-button class="dashboard" routerLink="/livraison">
+                    <mat-icon color="primary">local_shipping</mat-icon>
+                    Livraison
                 </button>
             </mat-list-item>
             <mat-list-item>
-                <button mat-button class="dashboard" routerLink="/login">
-                    <mat-icon color="primary">logout</mat-icon>
-                    Déconnexion
+                <button mat-button class="dashboard" routerLink="/livreur">
+                    <mat-icon color="primary">directions_run</mat-icon>
+                    Livreur
                 </button>
             </mat-list-item>
         </mat-list>

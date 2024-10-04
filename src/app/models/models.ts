@@ -6,15 +6,18 @@ export interface Cathegorie{
 }
 
 export interface Client{
+    id : number,
     nom : string ,
     prenoms : string ,
     adresse : string ,
+    email : string ,
     region : string ,
     telephone : string ,
     photos : string 
 }
 
 export interface Commande{
+    id : number,
     dateCommande : string ,
     qteCommander : number,
     typePayment : string,

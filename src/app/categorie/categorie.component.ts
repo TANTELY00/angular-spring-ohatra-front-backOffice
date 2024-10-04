@@ -13,7 +13,7 @@ export class CategorieComponent implements OnInit{
 
   public cathegorie : any ;
   public dataSources : any;
-  public displayedColumns : String[] = ["image","id","nomCategorie","description"];
+  public displayedColumns : String[] = ["id","image","nomCategorie","description","actions"];
   @ViewChild(MatPaginator)  paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;
 

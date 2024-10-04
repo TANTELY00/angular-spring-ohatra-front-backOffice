@@ -13,7 +13,7 @@ export class ClientComponent implements OnInit{
 
   public client : any ;
   public dataSources : any ;
-  public displayedColumns : string[] = ["photos","nom","prenoms","adresse","region","telephone"]; 
+  public displayedColumns : string[] = ["id","photos","nom","prenoms","adresse","email","region","telephone","actions"]; 
   @ViewChild(MatPaginator)  paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;
 

@@ -11,7 +11,9 @@ mat-list-item{
 }
 
 .dashboard{
-    font-size: 12px;
+    font-size: 14px;
+    color: #867F7F;
+    font-weight: 300;
 }
 
 .admin-image{
@@ -21,6 +23,33 @@ mat-list-item{
     object-fit: cover;
 }
 
+.menu-item {
+    display: flex;
+    align-items: center; /* Aligne verticalement au centre */
+    gap: 4px; /* Espace entre l'icône et le bouton */
+    height: 6vh;
+    margin-bottom: -9px;
+  }
+  
+  .menu-item mat-icon {
+    margin-left: 5px;
+  }
+  
+  .menu-item button {
+    font-size: 14px; /* Taille du texte du bouton */
+    
+  }
+
+  .dashboard1{
+    font-weight: lighter;
+  }
+  
+
+.view_list{
+    width: 15px;
+    height: 15px;
+}
+
 
 .image{
     text-align: center;
@@ -28,22 +57,23 @@ mat-list-item{
 }
 
 .informations {
-    font-size: 12px;
+    font-size: 19px;
     text-align: center;
-
 }
 
 .informations .role{
     color: blue;
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: lighter;
 }
 
 .informations .nom-admin{
-    margin-bottom: -4px;
+    margin-bottom: -2px;
+    font-weight: lighter;
 }
 
 .menu{
-    margin-left: 40px;
+    margin-left: 30px;
     padding: 0;
 }
 
@@ -69,3 +99,25 @@ mat-list-item{
 .container {
     padding: 10px;
 }
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.side-bar{
+    height: 100vh;
+}
+.image{
+    margin-top: 90px;
+}
+.side{
+    width: 250px;
+}
+.recherche {
+    padding-left: 30px; /* Ajoutez du remplissage pour éviter que le texte ne chevauche l'icône */
+    font-size: 11px;
+    padding-top: 5px;
+  }

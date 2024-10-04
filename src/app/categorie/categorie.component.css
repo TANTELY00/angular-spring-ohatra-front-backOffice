@@ -1,20 +1,16 @@
-.example-full-width{
+.example-full-width,.image{
 
     height: 75px;
-    width: 300px;
+    width: 350px;
 }
 
-.image{
-    height: 75px;
-    width: 300px;
-}
 button{
-    width: 300px;
+    width: 350px;
     margin-left: 8px;
 }
 
 .item1{
-    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .header{
@@ -23,18 +19,20 @@ button{
 .recherche{
     width: 250px;
 }
-.search-icon {
-    margin-left: 215px;
-    z-index: 2;
-  } 
-
-.container{
-    display: flex;
-    flex-wrap: wrap;
-}  
+ 
 
 .description {
-    height: 300px;
-    width: 300px;
+    height: 215px;
+    width: 380px;
 }
+.example-form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.admin-image{
+    width: 300px;
+    height: 250px;
+    opacity: 0.7;
+    margin-top: -9px;
+  }
 

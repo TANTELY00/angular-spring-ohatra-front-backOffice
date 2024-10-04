@@ -4,15 +4,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ServiceComponent } from './service/service.component';
 import { CategorieComponent } from './categorie/categorie.component';
 import { ClientComponent } from './client/client.component';
-import { CommandeComponent } from './commande/commande.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CommandeComponent } from './commande/commande.component';
+import { LivraisonComponent } from './livraison/livraison.component';
+import { LivreurComponent } from './livreur/livreur.component';
 
 const routes: Routes = [
   {path:"dashboard",component:DashboardComponent},
   {path:"service" ,component:ServiceComponent},
   {path:"categorie",component:CategorieComponent},
+  {path:"commande",component:CommandeComponent},
+  {path:"livraison",component:LivraisonComponent},
+  {path:"livreur",component:LivreurComponent},
   {path:"client" ,component:ClientComponent},
-  {path:"commande" ,component:CommandeComponent},
   {path:"profile" ,component:ProfileComponent},
 ];
 

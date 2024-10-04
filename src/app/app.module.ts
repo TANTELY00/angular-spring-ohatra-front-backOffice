@@ -16,7 +16,6 @@ import { MatListModule } from '@angular/material/list';
 import { CategorieComponent } from './categorie/categorie.component';
 import { ServiceComponent } from './service/service.component';
 import { ClientComponent } from './client/client.component';
-import { CommandeComponent } from './commande/commande.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -32,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDatepickerModule, MatDateRangeInput, MatDateRangePicker, MatRangeDateSelectionModel } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { CommandeComponent } from './commande/commande.component';
+import { LivraisonComponent } from './livraison/livraison.component';
+import { LivreurComponent } from './livreur/livreur.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,10 +41,12 @@ import { MatSelectModule } from '@angular/material/select';
     CategorieComponent,
     ServiceComponent,
     ClientComponent,
-    CommandeComponent,
     ProfileComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    CommandeComponent,
+    LivraisonComponent,
+    LivreurComponent
   ],
   imports: [
     BrowserModule,
