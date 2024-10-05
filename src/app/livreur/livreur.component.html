@@ -1,1 +1,142 @@
-<p>livreur works!</p>
+<div class="container">
+    <div class="item1">
+        <mat-card appearance="outlined" >
+            <mat-card-header>NOUVEAU LIVREUR</mat-card-header>
+            <form class="example-form">
+                <div class="premier">
+                    <mat-card-content>
+                        <mat-form-field class="example-full-width">
+                        <mat-label>Nom du livreur</mat-label>
+                        <input class="input" type="text" matInput placeholder="Nom du livreur">
+                        </mat-form-field>
+                    </mat-card-content>   
+                    <mat-card-content>
+                        <mat-form-field class="example-full-width">
+                        <mat-label>Prénoms du livreur</mat-label>
+                        <input class="input" type="text" matInput placeholder="Prénoms du livreur">
+                        </mat-form-field>
+                    </mat-card-content>    
+                    <mat-card-content>
+                        <mat-form-field class="example-full-width">
+                        <mat-label>Adresse du livreur</mat-label>
+                        <input class="input" type="text" matInput placeholder="Adresse du livreur">
+                        </mat-form-field>
+                    </mat-card-content>   
+                    
+                    <mat-card-actions class="button">
+                        <button  mat-button mat-raised-button color="primary" >Enregistrer Livreur </button>
+                    </mat-card-actions> 
+                </div>
+                <div class="deuxieme">
+                    <mat-card-content>
+                        <mat-form-field class="example-full-width">
+                        <mat-label>Email du livreur</mat-label>
+                        <input class="input" type="text" matInput placeholder="Email du livreur">
+                        </mat-form-field>
+                    </mat-card-content>   
+                    <mat-card-content>
+                        <mat-form-field class="example-full-width">
+                        <mat-label>Téléphone du livreur</mat-label>
+                        <input class="input" type="text" matInput placeholder="Téléphone du livreur">
+                        </mat-form-field>
+                    </mat-card-content> 
+                    <mat-card-content>
+                        <mat-form-field class="image">
+                            <mat-label>Photos du livreur</mat-label>
+                            <button type="button" mat-icon-button matPrefix (click)="f_input.click()">
+                            <mat-icon>attach_file</mat-icon>
+                            </button>
+                            <input matInput readonly formControlName="fileName" placeholder="Photos du livreur">
+                            <input type="file" hidden #f_input  accept="application/pdf">
+                        </mat-form-field> 
+                    </mat-card-content>
+                </div>
+                <div class="troixieme">
+                    <img class="admin-image" src="assets/images/unknow.jpg" alt="">
+                </div>
+            </form>
+        </mat-card>
+    </div>
+    <div class="item2">
+        <mat-card  appearance="outlined" class="table">
+            <mat-card-header class="header"  >
+                <div class="titre">
+                    LISTE DES LIVREURS
+                </div>
+                <div class="search-container">
+                    <input type="search" class="recherche" placeholder="Rechercher ici un livreur...">
+                    <mat-icon class="search-icon">search</mat-icon> 
+                </div>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="mat-elevation-z8">
+                    <!-- besoins d'importer MatTableModule  -->
+                    <!-- matSort pour trier le colomn -->
+                    <table matSort mat-table [dataSource]="dataSources">  
+                  
+                      <!-- Position Column -->
+                      <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                      </ng-container>
+
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="photos">
+                            <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> PHOTOS </th>
+                            <td mat-cell *matCellDef="let element"> {{element.photos}} </td>
+                          </ng-container>
+
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="nom">
+                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> NOM </th>
+                        <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+                      </ng-container>
+    
+                      <!-- Position Column -->
+                      <ng-container matColumnDef="prenoms">
+                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> PRENOMS </th>
+                        <td mat-cell *matCellDef="let element"> {{element.prenoms}} </td>
+                      </ng-container>
+           
+                      <!-- Weight Column -->
+                      <ng-container matColumnDef="adresse">
+                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> ADRESSE </th>
+                        <td mat-cell *matCellDef="let element"> {{element.adresse}} </td>
+                      </ng-container>
+
+                       <!-- Weight Column -->
+                       <ng-container matColumnDef="telephone">
+                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> TELEPHONE </th>
+                        <td mat-cell *matCellDef="let element"> {{element.telephone}} </td>
+                      </ng-container>
+
+                       <!-- Weight Column -->
+                       <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> EMAIL </th>
+                        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                      </ng-container>
+
+                       <!-- Weight Column -->
+                       <ng-container matColumnDef="disponibilite">
+                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> DISPONIBILITE </th>
+                        <td mat-cell *matCellDef="let element"> {{element.disponibilite}} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> ACTIONS </th>
+                        <td mat-cell *matCellDef="let element">  </td>
+                      </ng-container>
+
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+                    </table>
+                  
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                                   showFirstLastButtons>
+                    </mat-paginator>
+                                   
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

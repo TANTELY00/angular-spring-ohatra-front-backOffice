@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
@@ -26,7 +27,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; 
 // pour la date
 import { MatDatepickerModule, MatDateRangeInput, MatDateRangePicker, MatRangeDateSelectionModel } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -34,6 +35,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { CommandeComponent } from './commande/commande.component';
 import { LivraisonComponent } from './livraison/livraison.component';
 import { LivreurComponent } from './livreur/livreur.component';
+import { ProduitComponent } from './produit/produit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,8 @@ import { LivreurComponent } from './livreur/livreur.component';
     DashboardComponent,
     CommandeComponent,
     LivraisonComponent,
-    LivreurComponent
+    LivreurComponent,
+    ProduitComponent
   ],
   imports: [
     BrowserModule,

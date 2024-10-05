@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CommandeComponent } from './commande/commande.component';
 import { LivraisonComponent } from './livraison/livraison.component';
 import { LivreurComponent } from './livreur/livreur.component';
+import { ProduitComponent } from './produit/produit.component';
 
 const routes: Routes = [
   {path:"dashboard",component:DashboardComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:"livreur",component:LivreurComponent},
   {path:"client" ,component:ClientComponent},
   {path:"profile" ,component:ProfileComponent},
+  {path:"produit/:nomCategorie" ,component:ProduitComponent},
 ];
 
 @NgModule({
