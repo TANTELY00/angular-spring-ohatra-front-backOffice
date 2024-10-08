@@ -1,3 +1,40 @@
 a{
     margin-left: auto;
 }
+.tableau{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.card1,.card2,.card3,.card4
+{
+    flex-grow: 1;
+    color: white;
+}
+
+.card1{
+    background-color: #3903fc;
+}
+.card2{
+    background-color: #9141d3;
+}
+.card3{
+   background-color:  #013a74;
+}
+.card4{
+    background-color: #9003fc;
+}
+mat-card-header{
+    margin-bottom: 10px;
+}
+
+.header{
+    color: white;
+}
+.visiteur{ 
+    display: flex;
+}
+.stock{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

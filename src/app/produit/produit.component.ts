@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ActivatedRoute } from '@angular/router';
+import { CategorieServiceService } from '../service-backend/categorie-service.service';
 
 @Component({
   selector: 'app-produit',
@@ -14,19 +15,41 @@ export class ProduitComponent implements OnInit{
 
   public produit : any ;
   public dataSources : any ;
-  public displayedColumns : string[] = ["code","photos","nomCathegorie","designation",
-                                        "quantite","prix","type","description","couleur"]; 
+  public displayedColumns : string[] = ["code","photos","nomCategorie","type",
+                                        "designation","couleur",
+                                        "pointure","prix","quantite","actions"]; 
   @ViewChild(MatPaginator)  paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;
-  public cathegorie! : string ;
+  public  cathegorieList:  any;
 
-  constructor(private serviceProduit : ServiceProduitService ,private activateRoute: ActivatedRoute){
+  constructor(private serviceCategorie : CategorieServiceService, private produitService : ServiceProduitService){
 
   }
 
   ngOnInit(): void {
-    let nomCategorie = this.activateRoute.snapshot.params['nomCategorie'];
-    console.log('NomCategorie:', nomCategorie);
+    this.produitService.getAllProduct()
+    .subscribe({
+      next : data=>{
+        this.produit = data;
+        this.dataSources = new MatTableDataSource(this.produit);
+        this.dataSources.paginator = this.paginator;
+        this.dataSources.sort = this.sort;
+      },
+      error:err=>{
+        console.log(err);
+      }
+    })
+   
+    this.serviceCategorie.getAllCategorie()
+    .subscribe({
+      next : data=>{
+        this.cathegorieList = data;
+      },
+      error:err=>{
+        console.log(err);
+      }
+    })
+
  }
  
 }

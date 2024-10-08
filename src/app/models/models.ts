@@ -64,7 +64,8 @@ export interface Produit{
     description : string , 
     couleur : string ,
     photos : string ,
-    nomCathegorie : string  
+    pointure : string,
+    nomCategorie : string  
 }
 
 

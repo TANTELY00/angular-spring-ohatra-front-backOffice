@@ -57,7 +57,7 @@
                 </button>
             </mat-list-item>
             <mat-list-item>
-                <button mat-button class="dashboard" routerLink="/service">
+                <button mat-button class="dashboard" routerLink="/service" >
                     <mat-icon color="primary">support_agent</mat-icon>
                     Service
                 </button>
@@ -69,23 +69,10 @@
         </div>
         <mat-list>
             <mat-list-item>
-                <button mat-button class="dashboard"  [matMenuTriggerFor]="importMenu">
+                <button mat-button class="dashboard" routerLink="/produit">
                     <mat-icon color="primary">shopping_bag</mat-icon>
                     Produit
-                    <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
                 </button>
-                <mat-menu #importMenu >
-                    <ng-container *ngFor="let p of cathegories; " class="check">
-                        <div class="menu-item">
-                            <div>
-                                <mat-icon color="primary" class="view_list">shopping_bag</mat-icon>
-                            </div>
-                            <div>
-                                <button mat-button class="dashboard1"  routerLink="/produit/{{p.nomCategorie}}" [value]="p.nomCategorie">{{p.nomCategorie}}</button>
-                            </div>
-                        </div>
-                    </ng-container>
-                </mat-menu>
             </mat-list-item>
             <mat-list-item>
                 <button mat-button class="dashboard" routerLink="/client">

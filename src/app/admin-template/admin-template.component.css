@@ -24,33 +24,14 @@ mat-list-item{
 }
 
 .menu-item {
-    display: flex;
-    align-items: center; /* Aligne verticalement au centre */
-    gap: 4px; /* Espace entre l'icône et le bouton */
-    height: 6vh;
+    height: 13vh;
     margin-bottom: -9px;
   }
-  
-  .menu-item mat-icon {
-    margin-left: 5px;
-  }
-  
-  .menu-item button {
-    font-size: 14px; /* Taille du texte du bouton */
-    
-  }
 
-  .dashboard1{
+  .menu-item button{
     font-weight: lighter;
   }
   
-
-.view_list{
-    width: 15px;
-    height: 15px;
-}
-
-
 .image{
     text-align: center;
     margin-top: 20px;

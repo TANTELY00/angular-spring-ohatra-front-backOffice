@@ -13,7 +13,7 @@ export class LivreurComponent implements OnInit{
 
   public livreur : any ;
   public dataSources : any ;
-  public displayedColumns : string[] = ["id","nom","prenoms","adresse","telephone","photos","email","disponibilite"]
+  public displayedColumns : string[] = ["id","photos","prenoms","adresse","telephone","nom","email","disponibilite","actions"]
   @ViewChild(MatPaginator)  paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;
 

@@ -1,0 +1,38 @@
+
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.message-service{
+    height: 64vh;
+}
+
+.service-description{
+   width: 98%;
+}
+
+mat-card-content{
+    display: flex;
+    align-items: center;
+}
+
+.send{
+    margin-left:20px ;
+    cursor: pointer;
+    margin-top: -18px;
+}
+
+mat-form-field {
+    border-radius: 10px;
+    height: 100px;
+    margin-left: -15px;
+}
+
+.message-service{
+    border: 1px solid;
+    border-color: rgb(71, 87, 233);
+    border-radius: 10px;
+    overflow-y: auto;
+}

@@ -17,7 +17,7 @@ export class LivraisonComponent implements OnInit{
   public displayedColumns : string[] = ["id","photos","dateLivraison","dateCommande",
                                         "qteCommander","code","designation","nomCategorie",
                                         "nom","prenoms","adresse","region","telephone",
-                                        "nom","telephone_liv","disponibilite","livrer"];
+                                        "nom_liv","telephone_liv","disponibilite","livrer","actions"];
 
  
   @ViewChild(MatPaginator)  paginator! : MatPaginator;

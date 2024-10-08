@@ -36,6 +36,7 @@ import { CommandeComponent } from './commande/commande.component';
 import { LivraisonComponent } from './livraison/livraison.component';
 import { LivreurComponent } from './livreur/livreur.component';
 import { ProduitComponent } from './produit/produit.component';
+import { ServiceAdminComponent } from './service-admin/service-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { ProduitComponent } from './produit/produit.component';
     CommandeComponent,
     LivraisonComponent,
     LivreurComponent,
-    ProduitComponent
+    ProduitComponent,
+    ServiceAdminComponent
   ],
   imports: [
     BrowserModule,

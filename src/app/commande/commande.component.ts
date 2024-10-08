@@ -16,7 +16,7 @@ export class CommandeComponent implements OnInit{
   public dataSources : any;
   public displayedColumns : string[] = ["id","dateCommande","codeProduit","telephoneClient","nomClient",
                                         "adresseClient","regionClient","typePayment",
-                                        "qteCommander"];
+                                        "qteCommander","actions"];
   public paymentType : string[] = [];
 
   @ViewChild(MatPaginator)  paginator! : MatPaginator;

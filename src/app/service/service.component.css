@@ -11,7 +11,21 @@ mat-card-actions button{
 
 .card{
     display: flex;
+    margin-bottom: 10px;
     /* justify-content: space-between; */
-    
+}
+
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.items{
+    display: flex;
+}
+.item2 img{
+    width: 300px;
+    height: 280px;
 }
 

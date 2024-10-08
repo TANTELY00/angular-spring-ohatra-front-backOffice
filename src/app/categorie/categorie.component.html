@@ -1,7 +1,7 @@
 <div class="container">
     <div class="item1">
         <mat-card appearance="outlined" >
-            <mat-card-header>NOUVELLE CATEGORIE</mat-card-header>
+            <mat-card-header >NOUVELLE CATEGORIE</mat-card-header>
             <form class="example-form">
                 <div class="premier">
                     <mat-card-content>
@@ -53,44 +53,51 @@
                 <div class="mat-elevation-z8">
                     <!-- besoins d'importer MatTableModule  -->
                     <!-- matSort pour trier le colomn -->
-                    <table matSort mat-table [dataSource]="dataSources">  
+                    <div class="table-scrool">
+                        <table matSort mat-table [dataSource]="dataSources">  
                   
-                      <!-- Position Column -->
-                      <ng-container matColumnDef="id">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-                      </ng-container>
-
-                      <!-- Symbol Column -->
-                      <ng-container matColumnDef="image">
-                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> IMAGE </th>
-                        <td mat-cell *matCellDef="let element"> {{element.image}} </td>
-                      </ng-container>
-    
-                      <!-- Position Column -->
-                      <ng-container matColumnDef="nomCategorie">
-                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> NOM CATEGORIE </th>
-                        <td mat-cell *matCellDef="let element"> {{element.nomCategorie}} </td>
-                      </ng-container>
-           
-                      <!-- Weight Column -->
-                      <ng-container matColumnDef="description">
-                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> DESCRIPTION </th>
-                        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-                      </ng-container>
-
-                      <ng-container matColumnDef="actions">
-                        <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> ACTIONS </th>
-                        <td mat-cell *matCellDef="let element">  </td>
-                      </ng-container>
-
-                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
-                    </table>
-                  
-                    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                                   showFirstLastButtons>
-                    </mat-paginator>
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="id">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                            </ng-container>
+      
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="image">
+                              <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> IMAGE </th>
+                              <td mat-cell *matCellDef="let element"> 
+                                <img class="donne-image" src="assets/images/unknow.jpg" alt="">
+                              </td>
+                            </ng-container>
+          
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="nomCategorie">
+                              <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> NOM CATEGORIE </th>
+                              <td mat-cell *matCellDef="let element"> {{element.nomCategorie}} </td>
+                            </ng-container>
+                 
+                            <!-- Weight Column -->
+                            <ng-container matColumnDef="description">
+                              <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> DESCRIPTION </th>
+                              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                            </ng-container>
+      
+                            <ng-container matColumnDef="actions">
+                                <th mat-header-cell *matHeaderCellDef MatSortModule mat-sort-header> ACTIONS </th>
+                                <td class="actions" mat-cell *matCellDef="let element"> 
+                                    <mat-icon class="edit">edit</mat-icon>
+                                    <mat-icon class="delete">delete</mat-icon>
+                                </td>
+                              </ng-container>
+      
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+                          </table>
+                        
+                          <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                                         showFirstLastButtons>
+                          </mat-paginator>
+                    </div>
                                    
                 </div>
             </mat-card-content>

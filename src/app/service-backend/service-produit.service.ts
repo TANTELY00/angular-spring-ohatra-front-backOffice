@@ -12,6 +12,9 @@ export class ServiceProduitService {
   constructor(private http : HttpClient ) { }
 
   // GET ALL PRODUIT
+  public getAllProduct():Observable<Array<Produit>>{
+    return this.http.get<Array<Produit>>(`${environment.backendHost}/produit`);
+  }
 
   
 }
