@@ -1,3 +1,4 @@
+
 a{
     margin-left: auto;
 }
@@ -35,6 +36,22 @@ mat-card-header{
     display: flex;
 }
 .stock{
+   
     margin-top: 10px;
     margin-bottom: 10px;
+    height: 23vh;
+    overflow-y: auto;
+    
 }
+
+.stocks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 10px;
+}
+
+.evolution-card{
+    height: 47vh;
+}
+

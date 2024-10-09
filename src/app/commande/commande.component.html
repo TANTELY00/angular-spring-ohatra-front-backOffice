@@ -76,11 +76,11 @@
                     </mat-card-content>   
                     <mat-card-content>
                         <mat-form-field class="image">
-                            <mat-label>Photos du payment</mat-label>
+                            <mat-label>Photos ou réçu du payment</mat-label>
                             <button type="button" mat-icon-button matPrefix (click)="f_input.click()">
                             <mat-icon>attach_file</mat-icon>
                             </button>
-                            <input matInput readonly formControlName="fileName" placeholder="Photos du payment">
+                            <input matInput readonly formControlName="fileName" placeholder="Photos ou réçu du payment">
                             <input type="file" hidden #f_input  accept="application/pdf">
                         </mat-form-field> 
                     </mat-card-content>
@@ -105,6 +105,10 @@
                     <mat-icon class="search-icon">search</mat-icon> 
                 </div>
             </mat-card-header>
+            <div class="alert">
+                <mat-icon>info</mat-icon>
+                <p>Veuillez séléctionné un commande pour verifier la réçu du payément</p>
+            </div>
             <mat-card-content>
                 <div class="mat-elevation-z8">
                     <!-- besoins d'importer MatTableModule  -->

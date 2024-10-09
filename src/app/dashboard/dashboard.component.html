@@ -5,26 +5,35 @@
             <mat-card-content>100</mat-card-content>
     </mat-card>
     <mat-card class="card2">
-        <mat-card-header><span class="header">Client Commandé par jours</span></mat-card-header>
+        <mat-card-header><span class="header">Client Commandés par jours</span></mat-card-header>
         <mat-card-content>200</mat-card-content>
     </mat-card>
     <mat-card class="card3">
-        <mat-card-header><span class="header">Livraison en Attente</span></mat-card-header>
+        <mat-card-header><span class="header">Livraisons en Attente</span></mat-card-header>
         <mat-card-content>100</mat-card-content>
     </mat-card>
     
     <mat-card class="card4">
-        <mat-card-header><span class="header">Chiffre d'affire par jours</span></mat-card-header>
+        <mat-card-header><span class="header">Chiffres d'affire par jours</span></mat-card-header>
         <mat-card-content>10 000 000 <span>MGA</span></mat-card-content>
     </mat-card>
 </div>
 <div class="stock">
-    <mat-card>
-        <mat-card-header></mat-card-header>
-    </mat-card>
+        <mat-card class="card-stock">
+            <mat-card-header class="paragraphe" >Stocks</mat-card-header>
+            <div class="stocks">
+                @for (p of produit; track p) {
+                    <mat-card class="card3">
+                        <mat-card-header><span class="header">Stock de {{p.designation}} dans  <br> {{p.cathegorie.nomCategorie}}  </span></mat-card-header>
+                        <mat-card-content>{{p.quantite}}</mat-card-content>
+                    </mat-card>
+                    
+                 }
+            </div>
+        </mat-card>
 </div>
 <div class="evolution">
-    <mat-card>
+    <mat-card class="evolution-card">
         <mat-card-header></mat-card-header>
     </mat-card>
 </div>

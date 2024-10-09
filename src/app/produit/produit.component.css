@@ -24,11 +24,6 @@ button{
     display: flex;
     flex-wrap: wrap;
 }
-.admin-image{
-    width: 280px;
-    height: 300px;
-    opacity: 0.7;
-  }
 
 .description {
     height: 300px;

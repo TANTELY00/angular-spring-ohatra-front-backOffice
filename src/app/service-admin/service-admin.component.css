@@ -33,6 +33,6 @@ mat-form-field {
 .message-service{
     border: 1px solid;
     border-color: rgb(71, 87, 233);
-    border-radius: 10px;
+    border-radius: 6px;
     overflow-y: auto;
 }

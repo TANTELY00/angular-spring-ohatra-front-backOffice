@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="auth">
+    <p class="titre">Ndao Han'Ohatra</p>
+    <div class="login">
+        <mat-card class="card">
+            <div class="ordres">
+                <div class="premier">
+                    <img class="admin-image" src="assets/images/login.png" alt="">
+                </div>
+                <div class="deuxieme">
+                    <mat-card-content class="content1">
+                        <mat-form-field class="field1" appearance="outline">
+                            <mat-label>Nom d'utilisateur ou Email</mat-label>
+                            <input class="input" type="text" matInput formControlName="username">
+                        </mat-form-field>
+                    </mat-card-content>
+                    <mat-card-content  class="content2">
+                        <mat-form-field  class="field2" appearance="outline">
+                            <mat-label>Mot de pass</mat-label>
+                            <input class="input" type="password" matInput formControlName="password">
+                        </mat-form-field>
+                    </mat-card-content>
+                    <p class="action1">Mot de pass oublié</p>
+                    <mat-card-actions align="end" class="action2">
+                        <button mat-button color="primary" mat-raised-button routerLink="/admin/dashboard">Se Connecter</button>
+                    </mat-card-actions>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
